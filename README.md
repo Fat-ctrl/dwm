@@ -22,7 +22,6 @@ This is my custom build of dwm (Dynamic Window Manager) with several patches and
 - **Warp**: Warps cursor to center of newly focused windows
 
 ### Custom Keybindings
-- **Alt** as MODKEY (instead of Windows/Super key)
 - Media keys support:
   - Brightness control (brightnessctl)
   - Volume control (pactl)
@@ -48,12 +47,51 @@ sudo apt install build-essential libx11-dev libxft-dev libxinerama-dev xorg \
 make clean install
 ```
 
-## Usage
-
+## Setup
+### No desktop manager
 Add to ~/.xinitrc:
 ```sh
 exec dwm
 ```
+
+### With a desktop manager
+Create a script that start dwm
+
+```sh
+sudo nano /usr/loca/bin/startdwm
+```
+
+```sh
+#!/bin/sh
+
+#feh --bg-scale ~/Download/black.png
+ibus-daemon -drxR
+
+dwmblocks &
+
+
+while true; do
+        # Log stderror to a file
+        dwm 2> ~/.dwm.log
+        # No error loggin
+        #dwn >/deb/null 2>&1
+done
+```
+
+Create a .desktop file for xsessions
+
+```sh
+[Desktop Entry]
+Encoding=UTF-8
+Name=dwm
+Comment=Dynamic window manager
+Exec=/usr/local/bin/startdwm
+Icon=dwm
+Type=XSession
+```
+Now change the session to dwm when login
+
+## Usage
 
 ### Key Bindings
 
