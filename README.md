@@ -7,7 +7,6 @@ This is my custom build of dwm (Dynamic Window Manager) with several patches and
 ### Patches Applied
 - **AlwaysCenter**: Makes new floating windows always appear in the center
 - **AttachBottom**: New windows are added at the bottom of the stack
-- **AutoStart**: Enables running autostart script on dwm startup
 - **MoveStack**: Allows moving windows through the stack
 - **NoBorder**: Removes borders when only one window is visible
 - **PerTag**: Per-tag window behavior settings
