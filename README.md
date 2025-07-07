@@ -4,14 +4,6 @@ This is my custom build of dwm (Dynamic Window Manager) with several patches and
 
 ## Changes from Original DWM
 
-### Appearance
-- Custom fonts setup:
-  - JetBrains Mono NF as primary font
-  - Font Awesome 6 for icons
-  - Noto Color Emoji for emoji support
-- Modified colors scheme with black accent color
-- 1px window borders
-
 ### Patches Applied
 - **AlwaysCenter**: Makes new floating windows always appear in the center
 - **AttachBottom**: New windows are added at the bottom of the stack
@@ -56,7 +48,6 @@ exec dwm
 
 ### With a desktop manager
 Create a script that start dwm
-
 ```sh
 sudo nano /usr/loca/bin/startdwm
 ```
@@ -79,7 +70,6 @@ done
 ```
 
 Create a .desktop file for xsessions
-
 ```sh
 [Desktop Entry]
 Encoding=UTF-8

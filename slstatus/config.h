@@ -66,8 +66,8 @@ static const char unknown_str[] = "n/a";
  */
  static const struct arg args[] = {
  	/* function             format          argument */
- 	{ wifi_essid,   		"%s", 			"wlp1s0" 		}, // Replace "wlan0" with your actual WiFi interface (use `ip a`)
- 	{ wifi_perc,			" (%s%%)|",		"wlp1s0"		},
+ 	{ wifi_essid,   		"%s", 			"wlan0" 		}, // Replace "wlan0" with your actual WiFi interface (use `ip a`)
+ 	{ wifi_perc,			" (%s%%)|",		"wlan0"		},
   { battery_perc, 		"%s%%", 		"BAT0" 			}, // Replace "BAT0" with your battery name (check with `ls /sys/class/power_supply`)
   { battery_remaining, 	" (%s)|", 		"BAT0" 			}, // Second part: time
  	{ datetime, 			"%s",       	"%a, %d %b %R" 	}, // Thu, May 22 14:58
