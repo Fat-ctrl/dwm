@@ -26,14 +26,7 @@ sudo apt install build-essential libx11-dev libxft-dev libxinerama-dev xorg \
                  brightnessctl pulseaudio flameshot
 ```
 
-2. Install required fonts:
-```sh
-# Install JetBrains Mono Nerd Font
-# Install Font Awesome 6
-# Install Noto Color Emoji
-```
-
-3. Build and install:
+2. Build and install:
 ```sh
 make clean install
 ```
@@ -48,7 +41,7 @@ exec dwm
 ### With a desktop manager
 Create a script that start dwm
 ```sh
-sudo nano /usr/loca/bin/startdwm
+sudo nano /usr/local/bin/startdwm
 ```
 
 ```sh
@@ -56,7 +49,7 @@ sudo nano /usr/loca/bin/startdwm
 
 #feh --bg-scale ~/Download/black.png
 ibus-daemon -drxR
-
+slstatus &
 dwmblocks &
 
 
